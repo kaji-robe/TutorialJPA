@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial of JPA</title>
+</head>
+<body>
+    <h1>Country一覧</h1>
+    <table>
+        <tr>
+            <th>コード</th>
+            <th>国名</th>
+            <th>人口</th>
+        </tr>
+        <tr th:each="data : ${countrylist}">
+            <td th:text="${data.code}"></td>
+            <td th:text="${data.name}"></td>
+            <td th:text="${data.population}"></td>
+        </tr>
+    </table>
+</body>
+</html>
