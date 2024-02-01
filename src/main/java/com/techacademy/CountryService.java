@@ -22,8 +22,6 @@ public class CountryService {
 
 
 
-
-
     // ----- 追加:ここから -----
     // 1件を検索して返す
     public Country getCountry(String code) {

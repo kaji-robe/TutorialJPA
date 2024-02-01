@@ -17,7 +17,16 @@ public class CountryController {
         this.service = service;
     }
 
-    // ----- 一覧画面 -----
+    //// ----- 一覧画面 -----
+    //    @GetMapping("/list")
+    //public String getList(Model model) {
+    //    // 全件検索結果をModelに登録
+    //    model.addAttribute("countrylist", service.getCountryList());
+    //    // country/list.htmlに画面遷移
+    //    return "country/list";
+    //}
+
+    // ----- 課題用の一覧画面 -----
     @GetMapping("/list")
     public String getList(Model model) {
         // 全件検索結果をModelに登録
@@ -25,6 +34,8 @@ public class CountryController {
         // country/list.htmlに画面遷移
         return "country/list";
     }
+
+
 
     // ----- 追加:ここから -----
     // ----- 詳細画面 -----
