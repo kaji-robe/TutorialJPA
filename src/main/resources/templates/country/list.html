@@ -16,10 +16,12 @@
             <td th:text="${data.code}"></td>
             <td th:text="${data.name}"></td>
             <td th:text="${data.population}"></td>
+<!--/*
             <td><a th:href="@{detail/}">詳細</a></td>
             <td><a th:href="@{delete/}">削除</a></td>
-            <td><a th:href="@{detail/(${data.code})}">テスト1</a></td>
-            <td><a th:href="@{detail/{id}/(id=${data.code})}">テスト2</a></td>
+*/-->
+            <td><a th:href="@{detail/{id}/(id=${data.code})}">詳細</a></td>
+            <td><a th:href="@{delete/{id}/(id=${data.code})}">削除</a></td>
 
 
 
