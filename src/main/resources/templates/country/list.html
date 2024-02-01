@@ -19,7 +19,7 @@
             <td><a th:href="@{detail/}">詳細</a></td>
             <td><a th:href="@{delete/}">削除</a></td>
             <td><a th:href="@{detail/(${data.code})}">テスト1</a></td>
-            <td><a th:href="@{/detail/{id}/view(id=$data.code})}">テスト2</a></td>
+            <td><a th:href="@{detail/{id}/(id=${data.code})}">テスト2</a></td>
 
 
 
