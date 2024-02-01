@@ -37,6 +37,17 @@ public class CountryService {
         repository.save(country);
     }
 
+    // 削除画面用の全件を検索して返す
+    public Country getDeleteCountryList(String code) {
+       // findByIdで検索
+        Optional<Country> option = repository.findById(code);
+        // 取得できなかった場合はnullを返す
+        Country country = option.orElse(null);
+        return country;
+     }
+
+
+
     // 削除を行なう
     @Transactional
     public void deleteCountry(String code) {

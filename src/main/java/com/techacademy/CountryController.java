@@ -56,6 +56,17 @@ public class CountryController {
         return "country/delete";
     }
 
+    // ----- 課題の削除画面 パスパラメタの値が設定されるように-----
+    @GetMapping(value = {"/delete/{code}/" })
+    public String getDeleteCountryList(@PathVariable(name = "code", required = false) String code, Model model) {
+    // codeが指定されていたら検索結果、無ければ空のクラスを設定
+    Country country = code != null ? service.getDeleteCountryList(code) : new Country();
+    // Modelに登録
+    model.addAttribute("country", country);
+    // country/detail.htmlに画面遷移
+    return "country/delete";
+    }
+
     // ----- 削除 -----
     @PostMapping("/delete")
     public String deleteCountry(@RequestParam("code") String code, Model model) {
